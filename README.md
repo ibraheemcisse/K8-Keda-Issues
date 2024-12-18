@@ -44,31 +44,23 @@ This repository contains the setup for testing **KEDA (Kubernetes Event-Driven A
 
 *   **Issue**: The service was configured as ClusterIP, making it inaccessible externally.
     
-*   **Observation**: This restricted the ability to test HTTP requests from outside the cluster.
-    
-
-### **3\. Ingress Configuration**
-
-*   **Issue**: Enabling Ingress for external traffic proved challenging.
-    
-*   **Observation**: Although Minikube's Ingress add-on was enabled, there were configuration mismatches, and the service remained unreachable.
-    
-
-### **4\. Resource Constraints**
+*   **Observation**: This restricted the ability to test HTTP requests from outside the cluster but I tried nodeport but it also did not work.
+        
+### **3\. Resource Constraints**
 
 *   **Issue**: Minikube’s default resource allocation was insufficient for KEDA and the HTTP Add-On.
     
 *   **Observation**: Resource contention led to performance issues during tests.
     
 
-### **5\. Load Testing Timeout**
+### **4\. Load Testing Timeout**
 
 *   **Issue**: Load testing tools like hey timed out due to service misconfiguration or network issues.
     
 *   **Observation**: HTTP requests failed with Client.Timeout exceeded while awaiting headers.
     
 
-### **6\. Scaling Issues**
+### **5\. Scaling Issues**
 
 *   **Observation**: The ScaledObject showed READY=False and did not trigger scaling, even under simulated load.
 
@@ -77,7 +69,7 @@ Error logs:
 *   failed to ensure HPA is correctly created for ScaledObjectno scaler found for type: http
     
 
-### **7\. Networking Challenges**
+### **6\. Networking Challenges**
 
 *   **Issue**: Minikube's networking setup caused intermittent access issues to services.
     
