@@ -72,9 +72,4 @@ Error logs:  failed to ensure HPA is correctly created for ScaledObjectno scaler
 *   **Issue**: Minikube's networking setup caused intermittent access issues to services.
     
 *   **Observation**: The ClusterIP service was unreachable when accessed via DNS (myapp.default.svc.cluster.local).
-    
-
-**Next Steps**
---------------
-
-The issues listed above need further investigation and resolution. This document serves as a summary for review and feedback. Please advise on possible solutions or additional steps to troubleshoot these challenges.
+  
