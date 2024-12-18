@@ -1,4 +1,4 @@
-KEDA Scaling with Minikube - Challenges
+KEDA Scaling with Minikube - Issues
 =======================================
 
 **Overview**
