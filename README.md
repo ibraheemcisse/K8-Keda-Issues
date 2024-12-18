@@ -64,9 +64,7 @@ This repository contains the setup for testing **KEDA (Kubernetes Event-Driven A
 
 *   **Observation**: The ScaledObject showed READY=False and did not trigger scaling, even under simulated load.
 
-Error logs: 
-    
-*   failed to ensure HPA is correctly created for ScaledObjectno scaler found for type: http
+Error logs:  failed to ensure HPA is correctly created for ScaledObjectno scaler found for type: http
     
 
 ### **6\. Networking Challenges**
