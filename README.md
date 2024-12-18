@@ -6,13 +6,13 @@ This repository contains the setup for testing KEDA (Kubernetes Event-Driven Aut
 
 Project Components
 
-Application:
+1. Application
 
 A simple Rock-Paper-Scissors game written in Python and Flask.
 
 Dockerized and deployed as myapp in the Kubernetes cluster.
 
-Key Kubernetes Manifests:
+2. Key Kubernetes Manifests
 
 deployment.yaml: Deploys the myapp application.
 
@@ -20,7 +20,7 @@ service.yaml: Exposes the application within the cluster as a ClusterIP service.
 
 scaledobject.yaml: Configures KEDA to scale myapp based on HTTP requests.
 
-KEDA HTTP Add-On:
+3. KEDA HTTP Add-On
 
 Used to enable scaling based on HTTP triggers.
 
