@@ -1,0 +1,16 @@
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: myapp-scaledobject
+  namespace: keda
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: myapp
+  triggers:
+  - type: http
+    metadata:
+      host: myapp.default.svc.cluster.local
+      port: "80"
+      requestsPerSecond: "1"
