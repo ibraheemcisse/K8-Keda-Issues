@@ -101,6 +101,6 @@ keda-metrics-apiserver-6c7fb698db-c47sp                 1/1     Running   11 (13
 keda-operator-855c889db-4vhfx                           1/1     Running   18 (13h ago)   2d2h
 myapp-99dddf697-mpqxb                                   1/1     Running   4 (13h ago)    42h
 
-### 2. ScaledObjects in keda Namespace:
+**2. ScaledObjects in keda Namespace:**
 
 
