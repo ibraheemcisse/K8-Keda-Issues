@@ -100,3 +100,7 @@ keda-http-add-on-scaler-5fd5d76bc7-vrtxz                1/1     Running   6 (13h
 keda-metrics-apiserver-6c7fb698db-c47sp                 1/1     Running   11 (13h ago)   2d2h
 keda-operator-855c889db-4vhfx                           1/1     Running   18 (13h ago)   2d2h
 myapp-99dddf697-mpqxb                                   1/1     Running   4 (13h ago)    42h
+
+### 2. ScaledObjects in keda Namespace:
+
+
