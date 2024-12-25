@@ -70,7 +70,7 @@ Error logs:  failed to ensure HPA is correctly created for ScaledObjectno scaler
 
 ```plaintext
 
-**1. Pods in `keda` Namespace:**
+1. Pods in `keda` Namespace:
 
 NAME                                           READY   STATUS    RESTARTS   AGE
 debug-pod                                      0/1     Error     0          42h
@@ -92,19 +92,19 @@ keda-metrics-apiserver-6c7fb698db-c47sp                 1/1     Running   11 (13
 keda-operator-855c889db-4vhfx                           1/1     Running   18 (13h ago)   2d2h
 myapp-99dddf697-mpqxb                                   1/1     Running   4 (13h ago)    42h
 
-**2. ScaledObjects in keda Namespace:**
+2. ScaledObjects in keda Namespace:
 
 NAME                           SCALETARGETKIND       SCALETARGETNAME                MIN   MAX   READY   ACTIVE   FALLBACK   PAUSED   TRIGGERS   AUTHENTICATIONS   AGE
 keda-add-ons-http-interceptor  apps/v1.Deployment    keda-add-ons-http-interceptor   3    50    True    False    False      Unknown  external                  2d2h
 keda-http-add-on-interceptor   apps/v1.Deployment    keda-http-add-on-interceptor    3    50    True    False    False      Unknown  external                  17h
 myapp-scaledobject             apps/v1.Deployment    myapp                           0    0     False   Unknown  False      Unknown  http                      17h
 
-**3. Deployment Status**
+3. Deployment Status
 
 NAME    READY   UP-TO-DATE   AVAILABLE   AGE
 myapp   1/1     1            1           2d1h
 
-**4. Load Testing Output**
+4. Load Testing Output
 
 Summary:
 Total: 40.2525 secs
