@@ -127,6 +127,6 @@ Status code distribution:
 Error distribution:
 [100] Get http://192.168.49.2:80: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)
 
-**5. KEDA Operator Logs**
+5. KEDA Operator Logs
 
 2024-12-18T21:38:19Z ERROR Reconciler error {"controller": "scaledobject", "controllerGroup": "keda.sh", "controllerKind": "ScaledObject", "ScaledObject": {"name":"rock-paper-scissors-scaler","namespace":"default"}, "namespace": "default", "name": "rock-paper-scissors-scaler", "reconcileID": "edcea0e9-aebf-4f6c-9e89-4e34c017a44a", "error": "no scaler found for type: http"}
