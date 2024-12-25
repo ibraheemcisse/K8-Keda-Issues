@@ -70,9 +70,10 @@ Error logs:  failed to ensure HPA is correctly created for ScaledObjectno scaler
 
 ### Pods and ScaledObject Status
 
+```plaintext
+
 #### Pods in `keda` Namespace:
 
-```plaintext
 NAME                                           READY   STATUS    RESTARTS   AGE
 debug-pod                                      0/1     Error     0          42h
 keda-add-ons-http-controller-manager-569c95b8bc-2zs7d   2/2     Running   22 (13h ago)   2d2h
