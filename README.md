@@ -68,9 +68,6 @@ Error logs:  failed to ensure HPA is correctly created for ScaledObjectno scaler
 
 ### Error Logs and Output
 
-### Pods and ScaledObject Status
-
-```plaintext
 
 #### Pods in `keda` Namespace:
 
