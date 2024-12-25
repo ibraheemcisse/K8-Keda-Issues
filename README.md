@@ -100,16 +100,19 @@ keda-http-add-on-scaler-5fd5d76bc7-vrtxz                1/1     Running   6 (13h
 keda-metrics-apiserver-6c7fb698db-c47sp                 1/1     Running   11 (13h ago)   2d2h
 keda-operator-855c889db-4vhfx                           1/1     Running   18 (13h ago)   2d2h
 myapp-99dddf697-mpqxb                                   1/1     Running   4 (13h ago)    42h
-ScaledObjects in keda Namespace:
-plaintext
-Copy code
+
+#### ScaledObjects in keda Namespace:
+
+```plaintext
+
 NAME                           SCALETARGETKIND       SCALETARGETNAME                MIN   MAX   READY   ACTIVE   FALLBACK   PAUSED   TRIGGERS   AUTHENTICATIONS   AGE
 keda-add-ons-http-interceptor  apps/v1.Deployment    keda-add-ons-http-interceptor   3    50    True    False    False      Unknown  external                  2d2h
 keda-http-add-on-interceptor   apps/v1.Deployment    keda-http-add-on-interceptor    3    50    True    False    False      Unknown  external                  17h
 myapp-scaledobject             apps/v1.Deployment    myapp                           0    0     False   Unknown  False      Unknown  http                      17h
-2. Deployment Status
-plaintext
-Copy code
+
+#### 2. Deployment Status
+
+```plaintext
 NAME    READY   UP-TO-DATE   AVAILABLE   AGE
 myapp   1/1     1            1           2d1h
 3. Load Testing Output
