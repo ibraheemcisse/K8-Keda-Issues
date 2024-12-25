@@ -76,7 +76,7 @@ Error logs:  failed to ensure HPA is correctly created for ScaledObjectno scaler
 **Error Logs and Output**
 -------------------------
 
-### 1. Pods and ScaledObject Status
+###  Pods and ScaledObject Status
 
 #### Pods in `keda` Namespace:
 
@@ -101,6 +101,41 @@ keda-metrics-apiserver-6c7fb698db-c47sp                 1/1     Running   11 (13
 keda-operator-855c889db-4vhfx                           1/1     Running   18 (13h ago)   2d2h
 myapp-99dddf697-mpqxb                                   1/1     Running   4 (13h ago)    42h
 
-**2. ScaledObjects in keda Namespace:**
+ScaledObjects in keda Namespace:
 
+NAME                           SCALETARGETKIND       SCALETARGETNAME                MIN   MAX   READY   ACTIVE   FALLBACK   PAUSED   TRIGGERS   AUTHENTICATIONS   AGE
+keda-add-ons-http-interceptor  apps/v1.Deployment    keda-add-ons-http-interceptor   3    50    True    False    False      Unknown  external                  2d2h
+keda-http-add-on-interceptor   apps/v1.Deployment    keda-http-add-on-interceptor    3    50    True    False    False      Unknown  external                  17h
+myapp-scaledobject             apps/v1.Deployment    myapp                           0    0     False   Unknown  False      Unknown  http                      17h
+2. Deployment Status
+plaintext
+Copy code
+NAME    READY   UP-TO-DATE   AVAILABLE   AGE
+myapp   1/1     1            1           2d1h
+3. Load Testing Output
+plaintext
+Copy code
+Summary:
+Total: 40.2525 secs
+Slowest: 0.0000 secs
+Fastest: 0.0000 secs
+Average: NaN secs
+Requests/sec: 2.4843
 
+Response time histogram:
+Latency distribution:
+
+Details (average, fastest, slowest):
+DNS+dialup: NaN secs, 0.0000 secs, 0.0000 secs
+DNS-lookup: NaN secs, 0.0000 secs, 0.0000 secs
+req write: NaN secs, 0.0000 secs, 0.0000 secs
+resp wait: NaN secs, 0.0000 secs, 0.0000 secs
+resp read: NaN secs, 0.0000 secs, 0.0000 secs
+
+Status code distribution:
+Error distribution:
+[100] Get http://192.168.49.2:80: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)
+4. KEDA Operator Logs
+plaintext
+Copy code
+2024-12-18T21:38:19Z ERROR Reconciler error {"controller": "scaledobject", "controllerGroup": "keda.sh", "contr
